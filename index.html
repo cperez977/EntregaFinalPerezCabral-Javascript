@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Calculadora financiera</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <h1> Calculadora Financiera</h1>
+        <form id="formularioNombre">
+          <label for="nombre">Ingrese su Nombre:</label>
+          <input type="text" id="nombre" required>
+          <label for="apellido">Ingrese su Apellido:</label>
+          <input type="text" id="apellido" required>
+          <button type="submit">Guardar y continuar</button>
+        </form>
+        <div id="mensajeBienvenida" class="oculto">
+          <h2>Bienvenido/a <span id="nombreCompleto"></span></h2>
+        </div>
+        <form id="formularioMonto" class="oculto">
+          <label for="monto">Monto a financiar:</label>
+          <input type="number" id="monto" required>
+          <button type="submit">Guardar y continuar</button>
+        </form>
+        <div id="tarjetas" class="oculto">
+          <div class="tarjeta" data-tarjeta="Orange" data-interes="0" data-cuotas="1,3">
+            <h3>Orange</h3>
+            <p>Interés: 0%</p>
+          </div>
+          <div class="tarjeta" data-tarjeta="Citron" data-interes="50" data-cuotas="6,9">
+            <h3>Citron</h3>
+            <p>Interés: 50%</p>
+          </div>
+          <div class="tarjeta" data-tarjeta="Tangerine" data-interes="100" data-cuotas="12,18">
+            <h3>Tangerine</h3>
+            <p>Interés: 100%</p>
+          </div>
+        </div>
+        <div id="formularioCuotas" class="oculto">
+          <h4>Elija la tarjeta y la cantidad de cuotas:</h4>
+          <div id="contenedorCuotas"></div>
+        </div>
+        <div id="resultado" class="oculto">
+          <h2>Monto a pagar por mes:</h2>
+          <p id="cuotaMensual"></p>
+        </div>
+        <div id="resultado" class="oculto">
+          <h2>Monto a pagar por mes:</h2>
+          <p id="cuotaMensual"></p>
+          <p id="mensajeError" class="error oculto">Por favor, seleccione una opción de cuotas.</p>
+        </div>
+      </div>
+</body>
+</html>
